@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Practica Css</title>
+	<style>
+		:root{--card-bg:#fff;--muted:#6b7280;--accent:#0f172a}
+		html,body{height:100%}
+		body{
+			margin:0;
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+			background:#f7fafc;
+			color:var(--accent);
+			-webkit-font-smoothing:antialiased;
+			-moz-osx-font-smoothing:grayscale;
+		}
+		.wrap{
+			max-width:1000px;
+			margin:48px auto;
+			padding:0 20px 80px;
+		}
+		header{margin-bottom:28px}
+		h1{font-size:2rem;margin:0 0 8px}
+		p.lead{color:var(--muted);margin:0}
+
+		.grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:22px}
+		@media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+
+		.card{
+			background:var(--card-bg);
+			padding:18px;
+			border-radius:10px;
+			box-shadow:0 6px 18px rgba(11,22,39,0.06);
+			border:1px solid rgba(11,22,39,0.04);
+		}
+		.card h2{margin:0 0 8px;font-size:1.05rem}
+		.card img{display:block;width:100%;height:auto;max-width:600px;margin:0 0 12px;border-radius:6px}
+		.label{font-weight:700;color:#111;margin-bottom:6px}
+		.placeholder{background:#fff7ed;padding:10px;border-radius:6px;font-size:0.95rem;color:#7a4a00}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<header>
+			<h1>Practica Css</h1>
+			
+		</header>
+
+		<main class="grid">
+
+			<article class="card">
+				<h2>Ejercicio 1 — Centrado con Flexbox</h2>
+				<img src="assets/ejercicio1.png" alt="Ejercicio 1 - Centrado con Flexbox">
+				<div>
+					<div class="label">Explicación de la respuesta</div>
+					<p class="placeholder">Respuesta: Uso de <code>display:flex</code> en el contenedor junto con <code>justify-content:center</code> y <code>align-items:center</code> centra los elementos tanto horizontal como verticalmente sin depender de alturas fijas.</p>
+				</div>
+				<div style="margin-top:10px">
+					<div class="label">Contexto de la situación CSS</div>
+					<p class="placeholder">Contexto: Centrado de un bloque hijo dentro de un contenedor desconocido; común en modales y tarjetas.</p>
+				</div>
+			</article>
+
+			<article class="card">
+				<h2>Ejercicio 2 — Rejilla con Grid</h2>
+				<img src="assets/ejercicio2.png" alt="Ejercicio 2 - Grid">
+				<div>
+					<div class="label">Explicación de la respuesta</div>
+					<p class="placeholder">Respuesta: <code>display:grid</code> con <code>grid-template-columns</code> y <code>gap</code> ofrece control preciso de filas y columnas, permitiendo posicionamiento explícito y responsive con pocas reglas.</p>
+				</div>
+				<div style="margin-top:10px">
+					<div class="label">Contexto de la situación CSS</div>
+					<p class="placeholder">Contexto: Diseño de galerías o layouts complejos donde se necesitan alignments y áreas específicas.</p>
+				</div>
+			</article>
+
+			<article class="card">
+				<h2>Ejercicio 3 — Especificidad y Selectores</h2>
+				<img src="assets/ejercicio3.png" alt="Ejercicio 3 - Especificidad">
+				<div>
+					<div class="label">Explicación de la respuesta</div>
+					<p class="placeholder">Respuesta: La regla con mayor especificidad (IDs &gt; clases &gt; elementos) prevalece; usar selectores más específicos o reorganizar el CSS elimina conflictos sin recurrir a <code>!important</code>.</p>
+				</div>
+				<div style="margin-top:10px">
+					<div class="label">Contexto de la situación CSS</div>
+					<p class="placeholder">Contexto: Conflictos entre estilos globales y componentes locales que requieren priorización clara.</p>
+				</div>
+			</article>
+
+			<article class="card">
+				<h2>Ejercicio 4 — Responsive y Media Queries</h2>
+				<img src="assets/ejercicio4.png" alt="Ejercicio 4 - Media Queries">
+				<div>
+					<div class="label">Explicación de la respuesta</div>
+					<p class="placeholder">Respuesta: Las <code>@media</code> permiten cambiar reglas CSS según el ancho de la pantalla; combinar breakpoints con unidades relativas logra diseños fluidos.</p>
+				</div>
+				<div style="margin-top:10px">
+					<div class="label">Contexto de la situación CSS</div>
+					<p class="placeholder">Contexto: Ajustar columnas, tamaños de fuente y espaciados entre escritorio y móviles.</p>
+				</div>
+			</article>
+
+			<article class="card">
+				<h2>Ejercicio 5 — Sombras, Bordes y Estética</h2>
+				<img src="assets/ejercicio5.png" alt="Ejercicio 5 - Sombras y Bordes">
+				<div>
+					<div class="label">Explicación de la respuesta</div>
+					<p class="placeholder">Respuesta: El uso moderado de <code>box-shadow</code>, <code>border-radius</code> y espacios mejora la jerarquía visual; sombras suaves dan profundidad sin recargar la UI.</p>
+				</div>
+				<div style="margin-top:10px">
+					<div class="label">Contexto de la situación CSS</div>
+					<p class="placeholder">Contexto: Mejora de tarjetas y componentes para destacar información importante manteniendo un estilo minimalista.</p>
+				</div>
+			</article>
+
+			<article class="card">
+				<h2>Ejercicio 6 — Flexbox: Orden y Alineación</h2>
+				<img src="assets/ejercicio6.png" alt="Ejercicio 6 - Flexbox orden y alineación">
+				<div>
+					<div class="label">Explicación de la respuesta</div>
+					<p class="placeholder">Respuesta: Propiedades como <code>order</code>, <code>align-self</code> y <code>flex-wrap</code> permiten controlar la posición y comportamiento de los ítems en diferentes tamaños sin cambiar el HTML.</p>
+				</div>
+				<div style="margin-top:10px">
+					<div class="label">Contexto de la situación CSS</div>
+					<p class="placeholder">Contexto: Reordenar elementos en una barra de navegación o grid de productos según el espacio disponible.</p>
+				</div>
+			</article>
+
+			<article class="card">
+				<h2>Ejercicio 7 — Grid: Alineación de Ítems</h2>
+				<img src="assets/ejercicio7.png" alt="Ejercicio 7 - Grid alineación">
+				<div>
+					<div class="label">Explicación de la respuesta</div>
+					<p class="placeholder">Respuesta: <code>align-items</code>, <code>justify-items</code> y <code>place-items</code> en el contenedor grid controlan el alineado de los elementos dentro de sus celdas, facilitando layouts consistentes.</p>
+				</div>
+				<div style="margin-top:10px">
+					<div class="label">Contexto de la situación CSS</div>
+					<p class="placeholder">Contexto: Alinear contenido de tarjetas o celdas que contienen elementos de distinta altura.</p>
+				</div>
+			</article>
+
+			<article class="card">
+				<h2>Ejercicio 8 — Box Model: Padding y Box-Sizing</h2>
+				<img src="assets/ejercicio8.png" alt="Ejercicio 8 - Box model">
+				<div>
+					<div class="label">Explicación de la respuesta</div>
+					<p class="placeholder">Respuesta: Usar <code>box-sizing:border-box</code> simplifica cálculos de ancho/alto porque padding y border se cuentan dentro del tamaño total, evitando desbordes inesperados.</p>
+				</div>
+				<div style="margin-top:10px">
+					<div class="label">Contexto de la situación CSS</div>
+					<p class="placeholder">Contexto: Evitar que los elementos crezcan más de lo esperado al añadir padding o bordes, especialmente en layouts responsivos.</p>
+				</div>
+			</article>
+
+			<article class="card">
+				<h2>Ejercicio 9 — Selectores Avanzados y Pseudo-clases</h2>
+				<img src="assets/ejercicio9.png" alt="Ejercicio 9 - Selectores avanzados">
+				<div>
+					<div class="label">Explicación de la respuesta</div>
+					<p class="placeholder">Respuesta: Selectores como <code>:not()</code>, <code>:nth-child()</code> y pseudo-clases <code>:focus</code>/<code>:hover</code> permiten apuntar a elementos específicos sin añadir clases extras al HTML.</p>
+				</div>
+				<div style="margin-top:10px">
+					<div class="label">Contexto de la situación CSS</div>
+					<p class="placeholder">Contexto: Aplicar estilos alternos en listas, estados interactivos y excepciones de diseño sin tocar el DOM.</p>
+				</div>
+			</article>
+
+			<article class="card">
+				<h2>Ejercicio 10 — Transitions y Animaciones</h2>
+				<img src="assets/ejercicio10.png" alt="Ejercicio 10 - Transitions y Animaciones">
+				<div>
+					<div class="label">Explicación de la respuesta</div>
+					<p class="placeholder">Respuesta: <code>transition</code> suaviza cambios de propiedades, y <code>@keyframes</code> permite animaciones complejas; ambas deben usarse con propiedades que soporten animación para rendimiento óptimo.</p>
+				</div>
+				<div style="margin-top:10px">
+					<div class="label">Contexto de la situación CSS</div>
+					<p class="placeholder">Contexto: Mejorar la percepción de la interfaz con microinteracciones como hover, apertura de menús o estados activos.</p>
+				</div>
+			</article>
+
+			<article class="card">
+				<h2>Ejercicio 11 — Variables CSS y Theming</h2>
+				<img src="assets/ejercicio11.png" alt="Ejercicio 11 - Variables CSS">
+				<div>
+					<div class="label">Explicación de la respuesta</div>
+					<p class="placeholder">Respuesta: Las variables (<code>--nombre</code>) permiten definir colores y tamaños globales, y cambiarlas en un selector raíz o tema para alternar rápidamente estilos sin duplicar reglas.</p>
+				</div>
+				<div style="margin-top:10px">
+					<div class="label">Contexto de la situación CSS</div>
+					<p class="placeholder">Contexto: Implementar modos claro/oscuro y mantener consistencia de diseño entre componentes.</p>
+				</div>
+			</article>
+
+			<article class="card">
+				<h2>Ejercicio 12 — Accesibilidad y Focus Styles</h2>
+				<img src="assets/ejercicio12.png" alt="Ejercicio 12 - Accesibilidad y focus">
+				<div>
+					<div class="label">Explicación de la respuesta</div>
+					<p class="placeholder">Respuesta: Diseñar estilos de foco visibles (no depender solo del color) y respetar el orden tabular mejora la navegación por teclado y la accesibilidad general.</p>
+				</div>
+				<div style="margin-top:10px">
+					<div class="label">Contexto de la situación CSS</div>
+					<p class="placeholder">Contexto: Asegurar que formularios y controles sean operables sin ratón y que cumplan criterios de accesibilidad.</p>
+				</div>
+			</article>
+
+		</main>
+	</div>
+</body>
+</html>
+
